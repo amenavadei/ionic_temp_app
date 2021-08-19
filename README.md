@@ -1,2 +1,2 @@
-# ionic_temp_app-
+# ionic_temp_app
 Temporary App 
