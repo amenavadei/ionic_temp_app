@@ -4,6 +4,10 @@ const btnCancel = document.querySelector('#btn-cancel');
 const btnConfirm = document.querySelector('#btn-confirm');
 const expensesList = document.querySelector('#expenses-list');
 
+const totalExpensesOutput = document.querySelector('#total-expenses');
+
+let totalExpenses = 0;
+
 //clear button
 const btnClear = () =>{
    reasonInput.value = '';
@@ -24,6 +28,11 @@ btnConfirm.addEventListener('click' ,() => {
     newItem.textContent = enterReason + ': $ ' + enterInput;
 
     expensesList.appendChild(newItem);
+
+
+    totalExpenses += +enterInput;
+    totalExpensesOutput.textContent = totalExpenses;
+
 
    btnClear();
 
