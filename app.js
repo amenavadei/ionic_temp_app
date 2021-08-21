@@ -4,7 +4,11 @@ const btnCancel = document.querySelector('#btn-cancel');
 const btnConfirm = document.querySelector('#btn-confirm');
 const expensesList = document.querySelector('#expenses-list');
 
-
+//clear button
+const btnClear = () =>{
+   reasonInput.value = '';
+   amountInput.value = ''; 
+};
 
 
 btnConfirm.addEventListener('click' ,() => {
@@ -21,5 +25,18 @@ btnConfirm.addEventListener('click' ,() => {
 
     expensesList.appendChild(newItem);
 
+   btnClear();
+
 });
+
+btnCancel.addEventListener('click', btnClear);
+
+
+
+
+
+
+
+
+
 
