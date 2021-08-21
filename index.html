@@ -39,8 +39,8 @@
              
               <!-- Add Button-->
              <div margin-vertical text-right>
-              <ion-button fill="outline" color="danger"  id="btn-cancel"><ion-icon name="close-outline" slot="start"></ion-icon>Clear</ion-button>
-              <ion-button fill="solid" color="success"  id="btn-confirm"><ion-icon name="add-outline" slot="start"></ion-icon>Add Expense</ion-button>
+              <ion-button fill="outline" color="danger"  id="btn-cancel"><ion-icon name="close-outline" slot="start" size="small"></ion-icon>Clear</ion-button>
+              <ion-button fill="solid" color="primary"  id="btn-confirm" size="small"><ion-icon name="add-outline" slot="start"></ion-icon>Add Expense</ion-button>
             </div>
             
             <ion-card-content>
@@ -49,9 +49,15 @@
          </ion-row>
 
       <ion-row>
-         <ion-col>
-            <ion-list id='expenses-list'></ion-list>
+          <ion-col size-md="6" offset-md="3">
+             <ion-list id='expenses-list'></ion-list>
          </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size-md="6" offset-md="3">
+          <p margin>Total Expenses: <span id="total-expenses"></span> </p>
+        </ion-col>
       </ion-row>
 
     </ion-grid>  
