@@ -11,12 +11,19 @@
 </head>
 <body>
       <ion-app>
-         <ion-header>
-            <ion-toolbar color="primary">
-              <ion-title>Budget Planner</ion-title>
-            </ion-toolbar>
-        </ion-header> 
-        
+    
+          <ion-row>
+             <ion-col size-md="6" offset-md="3">
+             <ion-header>
+                 <ion-toolbar color="primary">
+                     <ion-title>Budget Planner</ion-title>
+                 </ion-toolbar>
+              </ion-header> 
+            </ion-col>
+          </ion-row>
+     
+
+
     <ion-content>
       <ion-grid>
         <ion-row>
@@ -28,12 +35,12 @@
            <ion-card-content>
              <ion-item>
                 <ion-label position="floating">Product</ion-label>
-                <ion-input type="text" id="input-reason" placeholder="Enter the Product"></ion-input>
+                <ion-input type="text" id="input-reason"  placeholder="Enter the Product"></ion-input>
               </ion-item>
               
               <ion-item>
                 <ion-label position="floating">Amount</ion-label>
-                <ion-input type="number" id="input-amount" placeholder="Enter Amount greater than 0"></ion-input>
+                <ion-input type="number" id="input-amount" step='0.01' value='0.00' placeholder="0.00"></ion-input>
               </ion-item>
 
              
@@ -56,12 +63,15 @@
 
       <ion-row>
         <ion-col size-md="6" offset-md="3">
-          <p margin>Total Expenses: <span id="total-expenses"></span> </p>
+          <p margin><strong>Total Expenses:</strong> <span id="total-expenses"></span> </p>
         </ion-col>
       </ion-row>
 
     </ion-grid>  
   </ion-content>
+ 
+  <ion-alert-controller></ion-alert-controller>
+
 </ion-app>
 
   <script src="app.js"></script>
