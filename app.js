@@ -31,7 +31,7 @@ btnConfirm.addEventListener('click' ,() => {
 
 
     totalExpenses += +enterInput;
-    totalExpensesOutput.textContent = totalExpenses;
+    totalExpensesOutput.textContent = ':$ ' + totalExpenses.toFixed(2);
 
 
    btnClear();
